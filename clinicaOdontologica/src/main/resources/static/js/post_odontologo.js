@@ -5,62 +5,63 @@ document.getElementById("add_new_odontologo").onsubmit=function(e) {
 window.addEventListener('load', function () {
 
     //Al cargar la pagina buscamos y obtenemos el formulario donde estarán
-    //los datos que el usuario cargará de la nueva pelicula
+    //los datos que el usuario cargará de el nuevo odontologo
     const formulario = document.querySelector('#add_new_odontologo');
 
     //Ante un submit del formulario se ejecutará la siguiente funcion
     formulario.addEventListener('submit', function (event) {
 
-       //creamos un JSON que tendrá los datos de la nueva película
+       //creamos un JSON que tendrá los datos del nuevo odontologo obtenidos del formulario
         const formData = {
             nombre: document.querySelector('#nombre').value,
             apellido: document.querySelector('#apellido').value,
             matricula: document.querySelector('#matricula').value,
-
         };
+
         //invocamos utilizando la función fetch la API peliculas con el método POST que guardará
-        //la película que enviaremos en formato JSON
-        const url = '/odontologos';
+        //al odontologo que enviaremos en formato JSON
+        const url = '/odontologos/save';
         const settings = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(formData)
         }
 
         fetch(url, settings)
             .then(response => response.json())
             .then(data => {
-                 //Si no hay ningun error se muestra un mensaje diciendo que la pelicula
-                 //se agrego bien
+                 //Si no hay ningun error se muestra un mensaje diciendo que odontologo se agrego bien
                  let successAlert = '<div class="alert alert-success alert-dismissible">' +
-                     '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                     '<strong></strong> Odontologo agregado </div>'
+                                    '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                                    '<strong>Odontólogo agregado</strong></div>'
 
                  document.querySelector('#response').innerHTML = successAlert;
                  document.querySelector('#response').style.display = "block";
+                 //llamamos a la función resetear campos vacíos
                  resetUploadForm();
-
             })
+
             .catch(error => {
-                    //Si hay algun error se muestra un mensaje diciendo que la pelicula
+                    //Si hay algun error se muestra un mensaje diciendo que odontologo
                     //no se pudo guardar y se intente nuevamente
                     let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
                                      '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                                     '<strong> Error intente nuevamente</strong> </div>'
+                                     '<strong>Error intente nuevamente</strong></div>'
 
                       document.querySelector('#response').innerHTML = errorAlert;
                       document.querySelector('#response').style.display = "block";
-                     //se dejan todos los campos vacíos por si se quiere ingresar otra pelicula
-                     resetUploadForm();})
+
+                     //llamamos a la función resetear campos vacíos
+                     resetUploadForm();
+                     })
     });
 
-
+    //Function que resetea los campos a vaciós para agregar otro registro
     function resetUploadForm(){
         document.querySelector('#nombre').value = "";
         document.querySelector('#apellido').value = "";
-         document.querySelector('#matricula').value = "";
+        document.querySelector('#matricula').value = "";
 
     }
 

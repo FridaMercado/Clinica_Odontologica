@@ -1,0 +1,6 @@
+
+[2024-09-12 19:59:18] [ ERROR] [GlobalExceptionHandler:16] No static resource static/pacienteSave.html.
+[2024-09-12 20:00:57] [ ERROR] [GlobalExceptionHandler:16] No static resource static/odontologoSave.html.
+[2024-09-12 20:18:23] [ ERROR] [GlobalExceptionHandler:16] JSON parse error: Cannot construct instance of `com.dh.clinicaOdontologica.entity.Domicilio` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('2')
+[2024-09-12 20:32:48] [ ERROR] [GlobalExceptionHandler:16] JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "32rfef": not a valid `java.lang.Integer` value
+[2024-09-12 20:59:44] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null
