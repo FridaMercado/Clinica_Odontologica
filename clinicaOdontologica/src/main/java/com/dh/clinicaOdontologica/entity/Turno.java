@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -24,7 +26,7 @@ public class Turno {
     @ManyToOne
     @JoinColumn(name="paciente_id")
     private Paciente paciente;
-    private LocalDate fecha;
+    private LocalDateTime fecha;
 
 
 }

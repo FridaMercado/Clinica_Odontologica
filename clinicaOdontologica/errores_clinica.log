@@ -4,3 +4,28 @@
 [2024-09-12 20:18:23] [ ERROR] [GlobalExceptionHandler:16] JSON parse error: Cannot construct instance of `com.dh.clinicaOdontologica.entity.Domicilio` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('2')
 [2024-09-12 20:32:48] [ ERROR] [GlobalExceptionHandler:16] JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "32rfef": not a valid `java.lang.Integer` value
 [2024-09-12 20:59:44] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null
+[2024-09-12 22:13:15] [ ERROR] [GlobalExceptionHandler:16] No static resource turnoList.html.
+[2024-09-12 22:13:21] [ ERROR] [GlobalExceptionHandler:16] No static resource turnoeSave.html.
+[2024-09-13 00:06:16] [ ERROR] [GlobalExceptionHandler:16] No static resource turnoeSave.html.
+[2024-09-13 00:12:55] [ ERROR] [GlobalExceptionHandler:16] No static resource turnoeSave.html.
+[2024-09-13 00:13:17] [ ERROR] [GlobalExceptionHandler:16] No static resource turnoeSave.html.
+[2024-09-13 00:21:06] [ ERROR] [GlobalExceptionHandler:16] No static resource turnoeSave.html.
+[2024-09-13 01:18:41] [ ERROR] [GlobalExceptionHandler:16] JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "ertv": not a valid `java.lang.Integer` value
+[2024-09-13 04:06:14] [ ERROR] [GlobalExceptionHandler:16] could not execute statement [Violación de una restricción de Integridad Referencial: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(1 AS BIGINT))"
+Referential integrity constraint violation: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(1 AS BIGINT))"; SQL statement:
+insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default) [23506-224]] [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; SQL [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; constraint [KQTJ6T7MULC2JMFKV92X4CTKWH]
+[2024-09-13 04:06:43] [ ERROR] [GlobalExceptionHandler:16] could not execute statement [Violación de una restricción de Integridad Referencial: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(2 AS BIGINT))"
+Referential integrity constraint violation: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(2 AS BIGINT))"; SQL statement:
+insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default) [23506-224]] [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; SQL [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; constraint [KQTJ6T7MULC2JMFKV92X4CTKWH]
+[2024-09-13 04:07:10] [ ERROR] [GlobalExceptionHandler:16] could not execute statement [Violación de una restricción de Integridad Referencial: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(2 AS BIGINT))"
+Referential integrity constraint violation: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(2 AS BIGINT))"; SQL statement:
+insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default) [23506-224]] [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; SQL [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; constraint [KQTJ6T7MULC2JMFKV92X4CTKWH]
+[2024-09-13 10:31:07] [ ERROR] [GlobalExceptionHandler:16] JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "q": not a valid `java.lang.Integer` value
+[2024-09-13 10:47:11] [ ERROR] [GlobalExceptionHandler:16] could not execute statement [Violación de una restricción de Integridad Referencial: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(333 AS BIGINT))"
+Referential integrity constraint violation: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(333 AS BIGINT))"; SQL statement:
+insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default) [23506-224]] [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; SQL [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; constraint [KQTJ6T7MULC2JMFKV92X4CTKWH]
+[2024-09-13 12:27:35] [ ERROR] [GlobalExceptionHandler:16] JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "w": not a valid `java.lang.Integer` value
+[2024-09-13 12:48:46] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null
+[2024-09-13 12:48:57] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null
+[2024-09-13 12:49:06] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null
+[2024-09-13 12:49:17] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null
