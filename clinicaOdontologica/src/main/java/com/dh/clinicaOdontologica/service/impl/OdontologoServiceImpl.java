@@ -1,5 +1,6 @@
 package com.dh.clinicaOdontologica.service.impl;
 import com.dh.clinicaOdontologica.entity.Odontologo;
+import com.dh.clinicaOdontologica.exception.ResourceNotFoundException;
 import com.dh.clinicaOdontologica.repository.IOdontologoRepository;
 import com.dh.clinicaOdontologica.service.IOdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +18,12 @@ public class OdontologoServiceImpl implements IOdontologoService {
         return iOdontologoRepo.save(odontologo);
     }
     @Override
-    public Odontologo searchById(Long id) {
-        //Guardamos en una variable optional el entity encontrado
+    public Odontologo searchById(Long id) throws ResourceNotFoundException {
         Optional<Odontologo> odontologoSearched = iOdontologoRepo.findById(id);
         if (odontologoSearched.isPresent()){
             return odontologoSearched.get();
         }else {
-        return null;
+            throw new ResourceNotFoundException("No se encontró el odontólogo con id " + id);
         }
     }
     @Override
@@ -41,6 +41,15 @@ public class OdontologoServiceImpl implements IOdontologoService {
     @Override
     public Odontologo searchByMatricula(String matricula) {
         return iOdontologoRepo.findByMatricula(matricula);
+    }
+    @Override
+    public Odontologo searchByLastNameAndFirstName(String nombre, String apellido) throws ResourceNotFoundException {
+        Optional<Odontologo> odontologoSearched = iOdontologoRepo.findByLastNameAndFirstName(nombre,apellido);
+        if (odontologoSearched.isPresent()){
+            return odontologoSearched.get();
+        }else {
+            throw new ResourceNotFoundException("No se encontró el odontólogo con nombre: " + nombre + " o apellido: " + apellido);
+        }
     }
 }
 

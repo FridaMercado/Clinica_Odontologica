@@ -29,3 +29,7 @@ insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default) [
 [2024-09-13 12:48:57] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null
 [2024-09-13 12:49:06] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null
 [2024-09-13 12:49:17] [ ERROR] [GlobalExceptionHandler:16] The given id must not be null
+[2024-09-13 15:18:40] [ ERROR] [GlobalExceptionHandler:16] JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "r2xr": not a valid `java.lang.Integer` value
+[2024-09-13 15:19:17] [ ERROR] [GlobalExceptionHandler:16] could not execute statement [Violación de una restricción de Integridad Referencial: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(2 AS BIGINT))"
+Referential integrity constraint violation: "FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (CAST(2 AS BIGINT))"; SQL statement:
+insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default) [23506-224]] [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; SQL [insert into turnos (fecha,odontologo_id,paciente_id,id) values (?,?,?,default)]; constraint [KQTJ6T7MULC2JMFKV92X4CTKWH]

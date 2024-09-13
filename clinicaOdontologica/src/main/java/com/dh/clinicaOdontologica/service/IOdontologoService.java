@@ -1,10 +1,6 @@
 package com.dh.clinicaOdontologica.service;
-
 import com.dh.clinicaOdontologica.entity.Odontologo;
-import com.dh.clinicaOdontologica.entity.Paciente;
-
 import java.util.List;
-import java.util.Optional;
 
 public interface IOdontologoService {
     Odontologo save(Odontologo odontologo);
@@ -13,4 +9,5 @@ public interface IOdontologoService {
     void update(Odontologo odontologo);
     void delete(Long id);
     Odontologo searchByMatricula(String matricula);
+    Odontologo searchByLastNameAndFirstName(String nombre, String apellido);
 }

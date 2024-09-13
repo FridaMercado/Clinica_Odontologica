@@ -1,5 +1,4 @@
 package com.dh.clinicaOdontologica.service.impl;
-
 import com.dh.clinicaOdontologica.entity.Paciente;
 import com.dh.clinicaOdontologica.repository.IPacienteRepository;
 import com.dh.clinicaOdontologica.service.IPacienteService;
@@ -38,5 +37,9 @@ public class PacienteServiceImpl implements IPacienteService {
     @Override
     public void delete(Long id) {
         iPacienteRepo.deleteById(id);
+    }
+    @Override
+    public Paciente searchByDNI(String dni) {
+        return iPacienteRepo.findByDNI(dni);
     }
 }
